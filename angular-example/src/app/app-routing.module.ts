@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ErrorComponent } from './error/error.component';
-import { AuthGuard } from './auth.guard';
+import { AuthGuard } from './shared';
 import { LoginComponent } from './login/login.component';
 import { AsteroidsComponent } from './asteroids/asteroids.component';
 

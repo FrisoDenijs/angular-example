@@ -1,5 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
-import { AuthService } from '../auth.service';
+import { AuthService } from '../shared';
 import { LoginForm } from './login.form';
 
 @Component({
