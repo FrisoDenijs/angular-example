@@ -23,10 +23,6 @@ describe('LoginComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
     authService = TestBed.get(AuthService);
-    spyOn(authService, 'login').and.returnValue(true);
-
-    component.loginForm.controls['userName'].setValue('admin');
-    component.loginForm.controls['password'].setValue('admin');
   });
 
   it('should create', () => {
@@ -34,6 +30,11 @@ describe('LoginComponent', () => {
   });
 
   it('should call authService.login when calling login method', () => {
+    spyOn(authService, 'login').and.returnValue(true);
+
+    component.loginForm.controls['userName'].setValue('admin');
+    component.loginForm.controls['password'].setValue('admin');
+    
     component.login();
     expect(authService.login).toHaveBeenCalled();
   });

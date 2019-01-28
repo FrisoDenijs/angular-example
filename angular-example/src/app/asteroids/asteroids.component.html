@@ -1,0 +1,25 @@
+<p>
+  asteroids works!
+</p>
+
+<div *ngIf="asteroidsForm.invalid">Form not valid</div>
+
+<form [formGroup]="asteroidsForm">
+  <label>
+    Start Date:
+    <input type="text" formControlName="startDate">
+  </label>
+  <label>
+    End Date:
+    <input type="text" formControlName="endDate">
+  </label>
+  <label>
+    API Key:
+    <input type="text" formControlName="apiKey">
+  </label>  
+  <button type="submit" (click)="getAsteroids()">Submit</button>
+</form>
+<br>
+Data:
+<div *ngIf="asteroidData">{{asteroidData}}</div>
+<div *ngElse>none retrieved</div>

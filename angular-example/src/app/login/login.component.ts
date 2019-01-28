@@ -1,5 +1,4 @@
 import { Component, OnInit, Output } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { LoginForm } from './login.form';
 
@@ -11,7 +10,7 @@ import { LoginForm } from './login.form';
 export class LoginComponent implements OnInit {
 
   public loginForm: LoginForm;
-  
+
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
