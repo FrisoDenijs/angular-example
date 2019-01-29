@@ -37,8 +37,6 @@ describe('AuthGuard', () => {
     expect(routerMock.navigateByUrl).toHaveBeenCalledWith('error');
   }));
 
-  
-
   it('should return true when logged in', inject([AuthGuard], (guard: AuthGuard) => {
     spyOn(authService, 'isLoggedIn').and.returnValue(true);
 
