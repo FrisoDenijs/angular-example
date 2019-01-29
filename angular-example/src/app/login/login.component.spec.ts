@@ -14,8 +14,10 @@ describe('LoginComponent', () => {
       declarations: [ LoginComponent ],
       imports: [ReactiveFormsModule],
       providers: [ AuthService ]
-    })
-    .compileComponents();
+    }).overrideComponent(LoginComponent, {
+      remove: {templateUrl: './login.component.html'},
+      add: {template: '<div></div>'}
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -36,6 +38,7 @@ describe('LoginComponent', () => {
     component.loginForm.controls['password'].setValue('admin');
 
     component.login();
-    expect(authService.login).toHaveBeenCalled();
+
+    expect(authService.login).toHaveBeenCalledWith('admin', 'admin');
   });
 });
