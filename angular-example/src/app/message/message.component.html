@@ -1,0 +1,24 @@
+<p>
+  message works!
+</p>
+
+<form [formGroup]="messageForm">
+  <label>
+    Message: 
+    <input type="text" formControlName="message">
+  </label>
+  <button type="submit" (click)="postMessage()">Submit</button>
+</form>
+
+
+<div>
+  Last Message is "{{lastMessage}}""
+</div>
+
+
+<div>
+  All Message:
+  <ul>
+    <li *ngFor="let msg of messageList"> {{msg}} </li>
+  </ul>
+</div>
