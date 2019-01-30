@@ -12,13 +12,13 @@
 
 
 <div>
-  Last Message is "{{lastMessage}}""
+  Last Message is "{{lastMessage$ | async}}""
 </div>
 
 
 <div>
   All Message:
   <ul>
-    <li *ngFor="let msg of messageList"> {{msg}} </li>
+    <li *ngFor="let msg of (messageList$ | async)"> {{msg}} </li>
   </ul>
 </div>

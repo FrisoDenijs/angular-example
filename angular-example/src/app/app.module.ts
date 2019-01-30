@@ -9,6 +9,9 @@ import { ErrorComponent } from './error/error.component';
 import { LoginComponent } from './login/login.component';
 import { AsteroidsComponent } from './asteroids/asteroids.component';
 import { MessageComponent } from './message/message.component';
+import { StoreModule } from '@ngrx/store';
+import { IMessageState } from './store/message.interface';
+import { rootReducer } from './store/message.reducer';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import { MessageComponent } from './message/message.component';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    StoreModule.forRoot<IMessageState>(rootReducer)
   ],
   providers: [],
   bootstrap: [AppComponent]
