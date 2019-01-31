@@ -21,5 +21,9 @@
 </form>
 <br>
 Data:
-<div *ngIf="asteroidData">{{asteroidData}}</div>
-<div *ngElse>none retrieved</div>
+<!-- <div *ngIf="asteroidData">{{asteroidData}}</div>
+<div *ngElse>none retrieved</div> -->
+
+<div>{{(asteroidData$ | async)?.data}}</div>
+
+<div *ngIf="(asteroidData$ | async)?.error">Error occured while getting data</div>
