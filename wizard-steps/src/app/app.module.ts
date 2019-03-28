@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { WizardStepHostDirective } from './wizard/wizard-step-host/wizard-step-host.directive';
 import { WizardNavigationComponent } from './wizard/wizard-navigation/wizard-navigation.component';
 import { WizardComponent } from './wizard/wizard.component';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { AppStateReducerToken, AppStateReducerProvider } from './store';
 
 @NgModule({
   declarations: [
@@ -16,9 +19,11 @@ import { WizardComponent } from './wizard/wizard.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot(AppStateReducerToken),
+    StoreDevtoolsModule.instrument(),
   ],
-  providers: [],
+  providers: [AppStateReducerProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
