@@ -9,13 +9,15 @@ import { WizardComponent } from './wizard/wizard.component';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AppStateReducerToken, AppStateReducerProvider } from './store';
+import { WizardStepIndicatorComponent } from './wizard/wizard-step-indicator/wizard-step-indicator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WizardStepHostDirective,
     WizardNavigationComponent,
-    WizardComponent
+    WizardComponent,
+    WizardStepIndicatorComponent
   ],
   imports: [
     BrowserModule,

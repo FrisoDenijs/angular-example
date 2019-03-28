@@ -1,3 +1,15 @@
-<p>
-  wizard works!
-</p>
+<mfd-wizard-step-indicator [steps]="steps$ | async"></mfd-wizard-step-indicator>
+<div>
+    <h2><!-- TODO: add step name--></h2>
+    <ng-template mfdWizardStepHost></ng-template>
+
+    <mfd-wizard-navigation 
+        *ngIf="showNavigation"
+        [showNext]="showNext$ | async" 
+        [showPrevious]="showPrevious$ | async" 
+        [showStop]="showStop$ | async" 
+        [showSave]="showSave$ | async"
+        (previousStep)="onPreviousStep()"
+        (nextStep)="onNextStep()"        
+        (stop)="onStop()"></mfd-wizard-navigation>
+</div>

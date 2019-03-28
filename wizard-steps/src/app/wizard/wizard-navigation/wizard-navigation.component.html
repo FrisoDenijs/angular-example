@@ -1,3 +1,6 @@
-<p>
-  wizard-navigation works!
-</p>
+<div class="form-controls">
+  <button *ngIf="showNext" (click)="onNextClick()"></button>
+  <button *ngIf="showSave" (click)="onNextClick()"></button>
+  <button *ngIf="showPrevious" (click)="onPreviousClick()"></button>
+  <button *ngIf="showStop" (click)="onStopClick()"></button>
+</div>
