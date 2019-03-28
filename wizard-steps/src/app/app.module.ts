@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { WizardStepHostDirective } from './wizard/wizard-step-host/wizard-step-host.directive';
+import { WizardNavigationComponent } from './wizard/wizard-navigation/wizard-navigation.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WizardStepHostDirective,
+    WizardNavigationComponent
   ],
   imports: [
     BrowserModule,
