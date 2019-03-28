@@ -10,6 +10,8 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AppStateReducerToken, AppStateReducerProvider } from './store';
 import { WizardStepIndicatorComponent } from './wizard/wizard-step-indicator/wizard-step-indicator.component';
+import { ViewProfileComponent } from './profile/view-profile/view-profile.component';
+import { EditProfileComponent } from './profile/edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { WizardStepIndicatorComponent } from './wizard/wizard-step-indicator/wiz
     WizardStepHostDirective,
     WizardNavigationComponent,
     WizardComponent,
-    WizardStepIndicatorComponent
+    WizardStepIndicatorComponent,
+    ViewProfileComponent,
+    EditProfileComponent
   ],
   imports: [
     BrowserModule,

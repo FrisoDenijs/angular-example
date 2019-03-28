@@ -1,3 +1,11 @@
-<p>
-  wizard-step-indicator works!
-</p>
+<div>
+  <nav>
+    <ol>
+      <li *ngFor="let step of steps">
+        <span *ngIf="step.isCurrent">{{step.number}}</span>
+        <span *ngIf="!step.isCurrent && !step.isCompleted">{{step.number}}</span>
+        <a *ngIf="!step.isCurrent && step.isCompleted" href="javascript:void(0)">{{step.number}}</a>        
+      </li>
+    </ol>
+  </nav>
+</div>
